@@ -1,1 +1,1 @@
-.vimrc
+/Users/binliu/.vimrc

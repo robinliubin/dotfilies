@@ -1,1 +1,1 @@
-.bash_profile
+/Users/binliu/.bash_profile
