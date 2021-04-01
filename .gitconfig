@@ -1,1 +1,5 @@
-/Users/binliu/.gitconfig
+[user]
+	name = Robin Liu
+	email = jazz119@gmail.com
+[core]
+	excludesfile = /Users/binliu/.gitignore_global
