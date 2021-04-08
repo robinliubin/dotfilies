@@ -19,7 +19,7 @@ alias ll='ls -ltrahG'
 alias gs="git status"
 alias gc="git commit"
 alias v="vim"
-
+alias vi="vim"
 # Save you from mistyping
 alias sl=ls
 
