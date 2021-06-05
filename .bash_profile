@@ -51,3 +51,6 @@ export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 alias k=kubectl
 export CLICOLOR=1
 alias tf=terraform
+alias kge="kubectl get events --sort-by='.lastTimestamp'"
+HISTFILESIZE=10000000
+HISTSIZE=10000000

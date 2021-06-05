@@ -14,6 +14,7 @@ set clipboard=unnamed
 " Turn on syntax highlighting.
 syntax on
 
+set mmp=5000
 " Disable the default Vim startup message.
 set shortmess+=I
 
