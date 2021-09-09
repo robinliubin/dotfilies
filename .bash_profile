@@ -54,3 +54,34 @@ alias tf=terraform
 alias kge="kubectl get events --sort-by='.lastTimestamp'"
 HISTFILESIZE=10000000
 HISTSIZE=10000000
+alias gcm='git commit -m'
+alias ga='git add .'
+export USER=binliu
+# Terraform aliases.
+alias tf=terraform
+alias tfw='tf workspace'
+alias tfwl='tfw list'
+alias tfwn='tfw new'
+alias tfws='tfw select'
+alias tfwd='tfw delete'
+alias tfv='tf validate'
+alias tfi='tf init'
+alias tfr='tf refresh'
+alias tfp='tf plan'
+alias tfa='tf apply'
+alias tfaa='tfa -auto-approve'
+alias tfd='tf destroy'
+alias tfda='tf destroy --auto-approve'
+alias tfo='tf output'
+alias tfs='tf state'
+alias tfsl='tf state list'
+alias tft='tf taint'
+alias tfu='tf untaint'
+export REGION="us-east-2"
+export PRIMARY_AZ="us-east-2b"
+export BACKUP_AZ="us-east-2c"
+export DEPLOYMENT="robinpuddle"
+export AZURE_STORAGE_ACCOUNT="bvdaistorageaccount"
+export AZURE_STORAGE_ACCESS_KEY="MWZZHICfJCIS1BZnFQf3wMXxueIfuJ5EKOwbQ0uvae49bqaV4YodPzKKnu/PCK9fwwYtdTdTSP0iAa2Y+kBhRA=="
+source <(kubectl completion bash)
+complete -F __start_kubectl k
