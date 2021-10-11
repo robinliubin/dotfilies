@@ -81,5 +81,10 @@ export REGION="us-east-2"
 export PRIMARY_AZ="us-east-2b"
 export BACKUP_AZ="us-east-2c"
 export DEPLOYMENT="robinpuddle"
-source <(kubectl completion bash)
 complete -F __start_kubectl k
+#source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+#source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+alias kpd="kubectl get pod"
+alias h2oa="h2o --conf ~/.h2oai/aks-h2o-cli-config.toml"
+alias h2oe="h2o --conf ~/.h2oai/eks-h2o-cli-config.toml"
