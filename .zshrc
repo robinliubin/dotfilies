@@ -192,3 +192,10 @@ if [ -f '/Users/binliu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bi
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+upload() {
+	#upload an object to my s3 bucket
+	echo "uploading $1 to s3://$MYS3BUCKETNAME"
+	aws s3 cp $1 s3://$MYS3BUCKETNAME --acl public-read
+	echo "upload is complete!" 
+	echo "to download: wget https://$MYS3BUCKETNAME.s3.us-east-2.amazonaws.com/$1"
+}
