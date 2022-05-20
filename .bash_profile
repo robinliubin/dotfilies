@@ -90,3 +90,5 @@ complete -F __start_kubectl k
 alias kpd="kubectl get pod"
 alias h2oa="h2o --conf ~/.h2oai/aks-h2o-cli-config.toml"
 alias h2oe="h2o --conf ~/.h2oai/eks-h2o-cli-config.toml"
+alias h2og="h2o --conf ~/.h2oai/gke-h2o-cli-config.toml"
+export MYS3BUCKETNAME="h2o-robin" 
