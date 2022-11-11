@@ -182,6 +182,8 @@ alias kpd="kubectl get pod"
 alias h2oa="h2o --conf ~/.h2oai/aks-h2o-cli-config.toml"
 alias h2oe="h2o --conf ~/.h2oai/eks-h2o-cli-config.toml"
 alias h2og="h2o --conf ~/.h2oai/gke-h2o-cli-config.toml"
+alias h2ou="h2o --conf ~/.h2oai/ucsf-h2o-cli-config.toml"
+alias h2ou2='h2o --conf ~/.h2oai/ucsf2-h2o-cli-config.toml'
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -197,5 +199,13 @@ upload() {
 	echo "uploading $1 to s3://$MYS3BUCKETNAME"
 	aws s3 cp $1 s3://$MYS3BUCKETNAME --acl public-read
 	echo "upload is complete!" 
-	echo "to download: wget https://$MYS3BUCKETNAME.s3.us-east-2.amazonaws.com/$1"
+	echo "to download, wget has been copied to clipboard: "
+	echo "wget https://$MYS3BUCKETNAME.s3.us-east-2.amazonaws.com/$1" 
+	echo "wget https://$MYS3BUCKETNAME.s3.us-east-2.amazonaws.com/$1" | pbcopy
 }
+s3rm() {
+	#delete an object from my s3 bucket
+	aws s3 rm s3://$MYS3BUCKETNAME/$1
+}
+export PATH="/usr/local/opt/go@1.17/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
