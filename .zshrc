@@ -184,6 +184,8 @@ alias h2oe="h2o --conf ~/.h2oai/eks-h2o-cli-config.toml"
 alias h2og="h2o --conf ~/.h2oai/gke-h2o-cli-config.toml"
 alias h2ou="h2o --conf ~/.h2oai/ucsf-h2o-cli-config.toml"
 alias h2ou2='h2o --conf ~/.h2oai/ucsf2-h2o-cli-config.toml'
+alias h2oe22100='h2o --conf ~/.h2oai/eks22100-h2o-cli-config.toml'
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -209,3 +211,6 @@ s3rm() {
 }
 export PATH="/usr/local/opt/go@1.17/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export DAILICENSE="/Users/binliu/Documents/H2O/configyamls/dai.sig"
+export STEAMLICENSE="/Users/binliu/Documents/H2O/configyamls/steam.sig"
